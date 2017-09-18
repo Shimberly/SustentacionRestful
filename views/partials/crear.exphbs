@@ -1,0 +1,19 @@
+
+<h1>DONUTS</h1>
+<form method="post" id="form1" action="">
+<label for="name">Id: </label><br>
+<input type="text" id="name" name="id" value="" required autofocus />
+<br>
+<label for="name">Tipo:</label><br>
+<input type="text" id="name" name="tipo" value="" />
+<br>
+<label for="name">Nombre:</label><br>
+<input type="text" id="name" name="tipo" value="" />
+<br>
+<label for="name">Ppu:</label><br>
+<input type="text" id="name" name="tipo" value="" />
+<br>
+<label for="name">Batters:</label><br>
+<input type="text" id="name" name="tipo" value="" />
+<input type="submit" value="Enviar" id="submit-button" />
+</form>

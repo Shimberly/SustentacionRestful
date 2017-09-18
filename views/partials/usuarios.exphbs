@@ -1,0 +1,48 @@
+<body onload="leerUsuarios()">
+
+    <!-- Navigation -->
+    <nav id="mainNavNos" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="/">MiauHistory</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/crearUsuario">CREAR NUEVO USUARIO</a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <br><br><br><br><br><br><br><br>
+   
+   
+    
+    <div class="container" id="ListaUsuario">
+         <div class="row">
+         </div>
+         <br>
+    </div>
+
+   
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+    
+    
+</body>

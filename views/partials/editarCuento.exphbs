@@ -1,0 +1,339 @@
+<body class="crearCuento" onload='editarCuento()'>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/">MiauHistory</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#" onclick="guardarEditar()">GUARDAR CUENTO</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/" id="salir">SALIR</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="nombreCuento">
+            <input id="idcuento" placeholder="Id del Cuento" class="ocultar"/>
+            <input id="nombre" placeholder="Nombre del Cuento" />
+            <input id="descripcion" placeholder="Descripcion" />
+        </div>
+
+        <!-- Slider -->
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner crear">
+                
+            </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev"><img class="glyphicon glyphicon-chevron-left" src="images/anterior.png"></a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next"><img class="glyphicon glyphicon-chevron-right" src="images/siguiente.png"></a>
+        </div>
+        <div class="nombreCuento">
+            <input id="credito" placeholder="Creditos del cuento" />
+        </div>
+
+        <!-- Fin Slider-->
+        <!-- Mini Hojas -->
+        
+        <div class="containerNavs">
+            <div class="col-md-10 col-sm-10">
+                <div class="nav-dots row">
+
+
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2 botonesHojas">
+                <button class="nHoja" title="Agregar Hoja"><img src="images/nuevaHoja.png" alt="icono nuevaHoja"></button>
+                <button class="bHoja" title="Eliminar Hoja"><img src="images/eliminarHoja.png" alt="icono eliminarHoja"></button>
+
+            </div>
+        </div>
+        <!-- Fin Mini Hojas -->
+
+        
+        <!-- SUBIR ESCENAS-->
+
+        <div class="col-md-12 col-sm-12">
+            <br>
+           
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Escenas</h3>
+                </div>
+                <div class="panel-body">
+
+                    <div class="col-md-8 col-sm-8 fondoEscenas">
+
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form enctype="multipart/form-data" method="post" class="formularioI">
+                            <input name="archivo" type="file" id="imagen" />
+                            <br />
+                            <br />
+                            <input type="button" class="subirImg" value="Subir imagen" />
+                            <br />
+                        </form>
+                        <!--div para visualizar mensajes-->
+                        <div class="messagesE"></div>
+                        <br />
+                        <br />
+                        <!--div para visualizar en el caso de imagen-->
+                        <div class="showImage"></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <!-- FIN SUBIR ESCENAS-->
+
+        <!-- SUBIR AUDIOS-->
+
+        <div class="col-md-12 col-sm-12">
+            <br>
+            <br>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">AUDIOS</h3>
+                </div>
+                <div class="panel-body">
+
+                    <div class="col-md-8 col-sm-8 fondoAudio">
+
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form enctype="multipart/form-data" class="formularioA" method="post">
+                            <input name="archivo" type="file" id="audio" />
+                            <br />
+                            <br />
+                            <input type="button" class="subirAudio" value="Subir audio" />
+                            <br />
+                        </form>
+                        <!--div para visualizar mensajes-->
+                        <div class="messagesA"></div>
+                        <br />
+                        <br />
+                        <!--div para visualizar en el caso de imagen-->
+                        <div class="showImage"></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <!-- FIN SUBIR AUDIOS-->
+
+
+        <!--PREGUNTAS-->
+
+        <!-- CREAR PREGUNTAS-->
+        <div class="col-md-12 col-sm-12">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">ACTIVIDADES</h2>
+                </div>
+
+                
+
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <!-- PREGUNTA 1-->
+        <div id="editarP">
+            <div class="col-md-12 col-sm-12">
+                <br>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">SELECCIONAR PERSONAJE</h3>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="col-md-8 col-sm-8 fondoAudioP">
+                            
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <form enctype="multipart/form-data" class="formularioAP">
+                                <input name="archivo" type="file" id="audioAP" />
+                                <br>
+                                <br>
+                                <input type="button" class="subirAudioP" value="Subir audio" />
+                                <br>
+                            </form>
+                            <!--div para visualizar mensajes-->
+                            <div class="messagesP"></div>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="panel-body">
+                        <div class="col-md-4 col-sm-4">
+                            <form enctype="multipart/form-data" class="formularioAP2">
+                                <input name="archivo" type="file" id="imagen1" />
+                                <br>
+                                <br>
+                                <input type="button" class="subirImgP" value="Subir imagen" />
+                                <br>
+                            </form>
+
+                            <!--div para visualizar en el caso de imagen-->
+                            <div class="showImage"></div>
+                            <div class="col-md-4 col-sm-4 fondoP1">
+                                <p>1</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4">
+                            <form enctype="multipart/form-data" class="formularioAP3">
+                                <input name="archivo" type="file" id="imagen2" />
+                                <br>
+                                <br>
+                                <input type="button" class="subirImgP2" value="Subir imagen" />
+                                <br>
+                            </form>
+
+                            <!--div para visualizar en el caso de imagen-->
+                            <div class="showImage"></div>
+                            <div class="col-md-4 col-sm-4 fondoP2">
+                                <p>2</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4">
+                            <label>¿Que numero de imagen es correcta?</label>
+
+                            <input type="text" name="respuesta" class="respuesta">
+                        </div>
+
+                        <div class="col-md-4 col-sm-4">
+
+                            <button type="button" id="btnGuardar2P1">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- PREGUNTA 2-->
+
+        <div id="editarP2">
+            <div class="col-md-12 col-sm-12">
+                <br>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">SELECCIONAR COLORES</h3>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="col-md-8 col-sm-8 fondoAudioP2">
+
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <form enctype="multipart/form-data" class="formularioA2P">
+                                <input name="archivo" type="file" id="audioAP2" />
+                                <br>
+                                <br>
+                                <input type="button" class="subirAudioP2" value="Subir audio" />
+                                <br>
+                            </form>
+                            <!--div para visualizar mensajes-->
+                            <div class="messagesP2"></div>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="panel-body">
+                        <div class="col-md-4 col-sm-4">
+                            <form enctype="multipart/form-data" class="formularioA2P2">
+                                <input name="archivo" type="file" id="imagen3" />
+                                <br>
+                                <br>
+                                <input type="button" class="subirImg2P" value="Subir imagen" />
+                                <br>
+                            </form>
+                            <!--div para visualizar mensajes-->
+
+                            <!--div para visualizar en el caso de imagen-->
+                            <div class="showImage"></div>
+                            <div class="col-md-4 col-sm-4 fondo2P1">
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4">
+                            <form enctype="multipart/form-data" class="formularioA2P3">
+                                <input name="archivo" type="file" id="imagen4" />
+                                <br>
+                                <br>
+                                <input type="button" class="subirImg2P2" value="Subir imagen" />
+                                <br>
+                            </form>
+                            <!--div para visualizar mensajes-->
+
+                            <!--div para visualizar en el caso de imagen-->
+                            <div class="showImage"></div>
+                            <div class="col-md-4 col-sm-4 fondo2P2">
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4">
+                            <label>¿Que numero de imagen es correcta?</label>
+
+                            <input type="text" name="respuesta" class="respuesta2">
+                        </div>
+
+                        <div class="col-md-4 col-sm-4">
+
+                            <button type="button" id="btnGuardar2P2">Guardar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- FIN CREAR PREGUNTAS-->
+
+    </div>
+   
+    <!-- Fin Container -->
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+
+</body>
+
